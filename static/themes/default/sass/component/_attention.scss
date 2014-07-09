@@ -1,0 +1,87 @@
+@import "component/extend";
+
+.oneuser {
+  @include clearfix;
+  //min-height: 90px;
+  padding: 20px;
+  vertical-align: middle;
+  border-bottom: 1px solid $bottom-color;
+  background-color: #ffffff;
+  .user-avar {
+    @include clearfix;
+    .avatar {
+      @extend .useravar;
+    }
+    .user-info {
+      float: left;
+      width: 400px;
+      .userp {
+        color: $unactive-licolor;
+        strong {
+          @extend .name-strong;
+        }
+        span {
+          color: $blue;
+        }
+      }
+      p {
+        margin-top: 10px;
+        padding: 0px 10px;
+      }
+    }
+    .atten-button {
+      @extend .layout;
+      background: url($common + 'follow-hl.png') no-repeat;
+      background-position: 4px 50%;
+      color: #ffffff;
+      background-color: #3DD020;
+      border-color: #3DD020;
+      cursor: pointer;
+      &:hover{
+        border: 1px solid #e76812;
+        background-color: #e76812;
+        background-image: url($common + 'cancelAttention.png');
+        background-position: 4px 50%;
+        cursor: pointer;
+      }
+    }
+    .follow-button {
+      @extend .layout;
+      background: url($common + 'follow.png') no-repeat;
+      border: 1px solid #DDDDDD;
+      background-position: 4px 50%;
+      &:hover {
+        background: url($common + 'follow-hl.png') no-repeat;
+        background-position: 4px 50%;
+        color: #ffffff;
+        background-color: #3DD020;
+        border-color: #3DD020;
+        cursor: pointer;
+      }
+    }
+    .cancel-button {
+      @extend .layout;
+      border: 1px solid #e76812;
+      background-color: #e76812;
+      background-image: url($common + 'cancelAttention.png');
+      background-position: 4px 50%;
+      cursor: pointer;
+      color:#ffffff;
+    }
+    .following-btn{
+      @extend .layout;
+      border: 1px solid #e76812;
+      background-color: #e76812;
+      background-image: url($common + 'following.png');
+      background-position: 4px 50%;
+      cursor: pointer;
+      color:#ffffff;
+      &:hover{
+        background-image: url($common + 'cancelAttention.png');
+      }
+    }
+
+  }
+
+}
+

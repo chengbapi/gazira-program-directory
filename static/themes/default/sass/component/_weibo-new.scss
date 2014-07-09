@@ -1,0 +1,75 @@
+@import "component/extend";
+@import "component/icon";
+@import "compass/css3";
+.weibo-info {
+  margin: 20px 0;
+  font-size: 12px;
+  border-bottom: 1px solid $bottom-color;
+  word-wrap: break-word;
+  overflow: hidden;
+  .user-avar {
+    @include clearfix;
+    padding: 0 20px;
+    .avatar {
+      @extend .useravar;
+    }
+    .user-info {
+      padding-left: 50px;
+      .userp {
+        color: $unactive-licolor;
+        strong {
+          @extend .name-strong;
+        }
+        span {
+          color: #7688B3;
+        }
+      }
+      p {
+        margin-top: 10px;
+        padding: 0px 10px;
+      }
+    }
+  }
+  .weibo-ct{
+    padding: 0 20px;
+    .weibo-st {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 22px;
+      span {
+        color: $blue;
+      }
+    }
+    .name-and-date {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      color: $unactive-licolor;
+      @include clearfix();
+      .date {
+        float: left;
+        width: 300px;
+      }
+      .operate {
+        float: right;
+        span {
+          display: block;
+          margin-right: 10px;
+          float: left;
+        }
+        .delete{
+          margin-top: -1px;
+        }
+      }
+    }
+  }
+
+
+
+
+}
+
+.praiseweibo {
+  padding-bottom: 20px;
+
+}

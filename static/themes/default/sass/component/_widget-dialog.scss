@@ -1,0 +1,214 @@
+.widget-dialog {
+  @include border-radius(5px);
+  position: relative;
+  > .header {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #ddd;
+    @include border-radius(5px 5px 0 0);
+  }
+  > .dialog-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    @include links(#999);
+  }
+  > .main {
+    @include border-radius(5px);
+    .content {
+      font-size: 12px;
+    }
+  }
+  > .footer {
+    position: relative;
+    .buttons {
+      text-align: right;
+      font-weight: bolder;
+      margin-right: 30px;
+      margin-top: -20px;
+      .btn {
+        font-size: 14px;
+        font-weight: bold;
+        border: 1px solid #D3D4D7;
+        background: none;
+        padding: 5px;
+        cursor: pointer;
+        @include border-radius(6px);
+        &.cancel {
+          color: #000000;
+        }
+        &.confirm {
+          background-color: #68BC25;
+          border-color: #68BC25;
+          color: #ffffff;
+        }
+      }
+
+    }
+
+  }
+}
+
+.delcontent, .commonDialog {
+  .main {
+    .content {
+      padding-top: 42px;
+      padding-left: 30px;
+
+    }
+  }
+}
+
+.delcontent {
+  .main {
+    .content {
+      @include border-radius(6px);
+    }
+  }
+}
+
+.praise-dialog {
+  .content {
+    position: relative;
+    @include border-radius(0 0 5px 5px);
+  }
+  .loading {
+    color: #999;
+    font-size: 24px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+  .pagination-box {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+  .btn {
+    background: #ececec;
+    border: 1px solid #999;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 3px;
+    &.disabled {
+      color: #aaa;
+      border-color: #ddd;
+      cursor: not-allowed;
+    }
+  }
+  .list-box {
+    min-height: 60px;
+    padding: 10px 10px 30px;
+    font-size: 0;
+  }
+  li {
+    width: 100px;
+    height: 100px;
+    @include inline-block();
+    margin: 5px;
+  }
+}
+
+.pic-display-dialog {
+  background-color: #000;
+  color: #fff;
+  .dialog-close {
+    background-image: url($common + 'dialog-close.png');
+    text-indent: -9999px;
+  }
+  .open-origin {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+  }
+  .dialog-close, .open-origin {
+    z-index: 999;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    background-color: #333;
+    @include border-radius(50%);
+    @include opacity(0.8);
+  }
+  .current-pic-wrap {
+    position: relative;
+    overflow: hidden;
+    .prev-btn, .next-btn {
+      position: absolute;
+      width: 20%;
+      height: 100%;
+      cursor: pointer;
+      display: none;
+    }
+    &:hover {
+      .prev-btn, .next-btn {
+        display: block;
+      }
+    }
+    .prev-btn {
+      background-image: url($common + 'prev.png');
+      top: 0;
+      left: 0;
+    }
+    .next-btn {
+      background-image: url($common + 'next.png');
+      top: 0;
+      right: 0;
+    }
+    .current-pic {
+      position: absolute;
+    }
+  }
+  .foot-wrap {
+    height: 80px;
+    position: relative;
+    .prev-btn, .next-btn {
+      width: 80px;
+      height: 100%;
+      cursor: pointer;
+    }
+    .prev-btn {
+        background-image: url($common + 'prev.png');
+        float: left;
+    }
+    .next-btn {
+        background-image: url($common + 'next.png');
+        float: right;
+    }
+    .count {
+      float: left;
+      margin: 0 20px;
+      line-height: 80px;
+    }
+    .pics-container {
+      float: left;
+      margin-top: 10px;
+      text-align: center;
+      width: 648px;
+      font-size: 0;
+    }
+    .pic-wrap {
+      @include inline-block();
+      cursor: pointer;
+      width: 60px;
+      height: 60px;
+      position: relative;
+      border: 1px solid transparent;
+      overflow: hidden;
+      margin-right: 10px;
+      &.current {
+        border-color: #09f;
+      }
+    }
+    img {
+      position: absolute;
+    }
+  }
+}
+

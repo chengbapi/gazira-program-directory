@@ -1,0 +1,36 @@
+.info-counts {
+  ul {
+    @include clearfix();
+    background-color: #ffffff;
+    *padding-bottom:24px;
+    li.item {
+      width: 100px;
+      height: 52px;
+      float: left;
+      cursor: pointer;
+      text-align: center;
+      padding: 0px 25px;
+      margin: 24px 0px;
+      color: #7d7d7d;
+      border-right: 1px solid #e4e4e4;
+      &.active {
+        color: #1577d2;
+      }
+      &.hide{
+       display: none;
+      }
+      .num {
+        font-size: 24px;
+        height:24px;
+      }
+      .item-name {
+        font-size: 12px;
+        *height:30px;
+       *line-height: 30px;
+      }
+    }
+    li.no-border {
+      border-right: none;
+    }
+  }
+}

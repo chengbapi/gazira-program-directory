@@ -1,0 +1,16 @@
+{
+  "name": "gazira",
+  "version": "0.0.1",
+  "authors": [
+    "chengbapi <chengbapi@gmail.com>"
+  ],
+  "description": "init gazira program directory",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
